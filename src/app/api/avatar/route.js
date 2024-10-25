@@ -1,19 +1,18 @@
 import axios from "axios";
-import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
   const formData = await req.formData();
   const photo = formData.get("photo");
 
-  const headersList = await headers()
-  const origin = headersList.get('origin')
+  // const headersList = await headers()
+  // const origin = headersList.get('origin')
 
-  if (origin !== 'http://localhost:3000' || origin !== 'https://freeappmaker.pro') {
-    return NextResponse.json({ message : 'UnAuthorised'}, { status: 401});
-  }
+  // if (origin !== 'http://localhost:3000' || origin !== 'https://freeappmaker.pro') {
+  //   return NextResponse.json({ message : 'UnAuthorised'}, { status: 401});
+  // }
 
-  const corsHeaders = {
+  const headers = {
     "Access-Control-Allow-Origin": "*", // Replace with your client's URL
   };
 
@@ -32,5 +31,6 @@ export async function POST(req) {
     { headers: { ...requestHeaders } }
   );
 
-  return NextResponse.json(response.data, { status: response.status, headers: {...corsHeaders} });
+
+  return NextResponse.json(response.data, { status: response.status, headers });
 }
