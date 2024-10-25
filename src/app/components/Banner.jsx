@@ -14,6 +14,8 @@ function copyText() {
     });
 }
 
+// https://gamead.netlify.app/api
+
 const Banner = (props) => {
   return (
     <main>
@@ -45,7 +47,7 @@ const Banner = (props) => {
                     type="text"
                     className="w-full text-xs sm:text-base lg:text-sm xl:text-base bg-transparent border-2 border-black focus:ring-0 focus:border-black rounded-lg sm:rounded-xl p-2 sm:p-3"
                     placeholder="Enter Your Website Address"
-                    value="http://localhost:3000/api"
+                    value=""
                   />
                 </div>
                 <div className="flex flex-col sm:flex-row gap-8 mt-8">
