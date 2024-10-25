@@ -14,7 +14,7 @@ export async function POST(req) {
   }
 
   const corsHeaders = {
-    "Access-Control-Allow-Origin": "http://localhost:3000", // Replace with your client's URL
+    "Access-Control-Allow-Origin": "https://freeappmaker.pro", // Replace with your client's URL
   };
 
   const data = new FormData();
